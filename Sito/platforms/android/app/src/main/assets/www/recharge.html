@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Ricarica conto</title>
+	
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery-validation.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/recharge.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+			  
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<!-- Nostri CSS -->
+        <link rel = "stylesheet" href="css/main.css" type = "text/css">
+        <link rel = "stylesheet" href="css/recharge.css" type = "text/css">
+
+        <script>
+            $('document').ready(function(){
+                var today = new Date();
+                var year = today.getFullYear();
+                for(var i = year; i < year + 50; i++){
+                    $('select[name=anno]').append("<option>"+i+"</option>");
+                }
+            });
+        </script>
+    </head>
+    <body onload="init();">
+        <!-- INIZIO HEADER -->
+		<div id="header"></div>
+        <!-- FINE HEADER -->
+
+        <br/>
+        <div id="title"><p>Ricarica conto<br/> Importo Attuale: </div>
+        <br/>
+        <button onclick='openManageLimit(this);' class="confirmButton"><div class="buttonText">Limiti spesa</div></button>
+        <br/>
+        <div class="container rechargeContainer">
+                <form id="method_form" >
+                    <div class="row"> 
+                        <label class="col-sm-12 col-md-6 col-lg-6 col-xl-6 control-label" id="myLabel">Tipo</label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <select name="tipo" onchange="checkInsertedValue();">
+                                <option> </option>
+                                <option>Carta</option>
+                                <option>IBAN</option>
+                            </select>
+                        </div>
+
+                        <label class="col-sm-12 col-md-6 col-lg-6 col-xl-6 control-label" id="myLabel">Codice Carta</label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <select name="cod_carta">
+                                <option> </option>
+                            </select>
+                        </div>
+
+                        <label class="col-sm-12 col-md-6 col-lg-6 col-xl-6 control-label" id="myLabel">IBAN</label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <select name="iban">
+                                <option> </option>
+                            </select>
+                        </div>
+
+                        <label class="col-sm-12 col-md-6 col-lg-6 col-xl-6 control-label" id="myLabel">Importo</label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <input type="text" name="saldo">
+                        </div>
+
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <button class="confirmButton" type="submit" disabled><div class="buttonText">Ricarica</div></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <br/>
+            <!-- INIZIO FOOTER -->
+			<div id="footer"></div>
+		    <!-- FINE FOOTER -->
+        </body>
+    </html>

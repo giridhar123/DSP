@@ -1,0 +1,8 @@
+<script>
+    var isCordovaApp = location.protocol === 'file:';
+
+	if (isCordovaApp == true)
+        alert("APP");
+	else
+		alert("BROWSER");
+</script>

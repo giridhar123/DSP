@@ -1,0 +1,15 @@
+.requestContainer {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid;
+    width: auto;
+    text-align: center;
+}
+
+.acceptButton {
+    width: auto;
+}
+
+.declineButton {
+    width: auto;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Metodi di pagamento</title>
+	
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://localhost:8000/js/jquery-validation.js"></script> 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="http://localhost:8000/user/js/manageMethods.js"></script>
+		<script type="text/javascript" src="http://localhost:8000/js/main.js"></script>
+			  
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<!-- Nostri CSS -->
+        <link rel = "stylesheet" href="http://localhost:8000/css/main.css" type = "text/css">
+        <link rel = "stylesheet" href="http://localhost:8000/user/css/manageMethods.css" type = "text/css">	
+
+        <script>
+            $('document').ready(function(){
+                var today = new Date();
+                var year = today.getFullYear();
+                for(var i = year; i < year + 50; i++){
+                    $('select[name=anno]').append("<option>"+i+"</option>");
+                }
+            });
+        </script>
+    </head>
+    <body onload="setUserMethod();">
+        <!-- INIZIO HEADER -->
+		<div id="header"></div>
+        <!-- FINE HEADER -->
+
+        <br/>
+        <div id="title"><p>Metodi di pagamento</p></div>
+        <br/>
+        <div class="container">
+            <div class="manageMethodsContainer">
+                <form id="method_form" >
+                    <div class="row"> 
+                        <label class="col-sm-12 col-md-6 col-lg-6 col-xl-3 control-label" id="myLabel">Tipo</label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                            <select name="tipo" onchange="checkInsertedValue();">
+                                <option> </option>
+                                <option>Carta</option>
+                                <option>IBAN</option>
+                            </select>
+                        </div>
+
+                        <label class="col-sm-12 col-md-6 col-lg-6 col-xl-3 control-label" id="myLabel">Codice Carta</label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                            <input type="text" class="customText" size="16" name="cod_carta" disabled>
+                        </div>
+
+                        <label class="col-sm-12 col-md-6 col-lg-6 col-xl-3 control-label" id="myLabel">Scadenza</label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                            <select name="mese" disabled>
+                                <option></option>
+                                <option>01</option>
+                                <option>02</option>
+                                <option>03</option>
+                                <option>04</option>
+                                <option>05</option>
+                                <option>06</option>
+                                <option>07</option>
+                                <option>08</option>
+                                <option>09</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                             </select>
+                        
+                            <select name="anno" disabled>
+                                    <option></option>
+                            </select>     
+                        </div>
+
+                        <label class="col-sm-12 col-md-6 col-lg-6 col-xl-3 control-label" id="myLabel">CVV</label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                            <input type="text" size="30" name="cvv" disabled>
+                        </div>
+
+                        <label class="col-sm-12 col-md-6 col-lg-6 col-xl-3 control-label" id="myLabel">IBAN</label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                            <input type="text" size="27" name="iban" disabled>
+                        </div>
+
+                        <label class="col-sm-12 col-md-6 col-lg-6 col-xl-3 control-label" id="myLabel"></label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                            <button class="confirmButton" type="submit" disabled><div class="buttonText">Aggiungi</div></button>
+                        </div>
+                    </div>                    
+                </form>
+            </div>
+            </div>
+            <br/>
+            <!-- INIZIO FOOTER -->
+			<div id="footer"></div>
+		    <!-- FINE FOOTER -->
+        </body>
+    </html>

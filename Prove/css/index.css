@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+body {
+	background-color: rgb(175, 175, 88);
+}
+
+.objHeader {
+	width: 100vw;
+	height: 450px;
+	margin-bottom: 0px;
+}
+
+@media (max-width: 768px){
+	.objHeader{
+	  height: 68px;
+	}
+  }
+
+.title {
+	text-align: center;
+	background-color: white;
+	border-width: 1px;
+	border-style: solid;
+	border-color:blue;
+	border-radius: 2px;
+}
+
+.description {
+	margin-top: -20px;
+	background-color: red;
+	border-width: 1px;
+	border-style: solid;
+	border-color:blue;
+	border-radius: 2px;
+}

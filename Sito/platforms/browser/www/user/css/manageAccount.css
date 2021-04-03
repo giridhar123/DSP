@@ -1,0 +1,12 @@
+input[type=date] {
+    margin-left: 10px;
+}
+
+input[type=text], input[type=password] {
+    width: 98%;
+    padding: 8px 10px;
+    margin: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+            <title>Visualizza Movimenti</title>
+            
+            <!-- Required meta tags -->
+			<meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+            
+            <script type="text/javascript" src="http://www.dsp.it:8000/user/js/showTransactions.js"></script>
+            <script type="text/javascript" src="http://www.dsp.it:8000/js/main.js"></script>
+            <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+            
+            <!-- Nostri CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+            <link rel = "stylesheet" href="http://www.dsp.it:8000/css/main.css" type = "text/css">
+
+            <!-- TABLESORTER -->
+            <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+            <script src="http://www.dsp.it:8000/user/js/table-sorter/jquery.tablesorter.js"></script>
+            <script src="http://www.dsp.it:8000/user/js/table-sorter/jquery.tablesorter.widgets.js"></script>
+            <script src="http://www.dsp.it:8000/user/js/table-sorter/jquery.tablesorter.widgets-filter-formatter-html5.js"></script>
+            <link rel="stylesheet" href="http://www.dsp.it:8000/user/css/table-sorter/theme.default.css">
+            <link rel="stylesheet" href="http://www.dsp.it:8000/user/css/table-sorter/filter-formatter.css">
+            <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+        </head>
+        <body onload="setTransactionsTable();">
+            <!-- INIZIO HEADER -->
+		    <div id="header"></div>
+            <!-- FINE HEADER -->
+
+            <br/>
+            <div id="title"><p>Visualizza movimenti</p></div>
+            <br/>
+            <div id="myContent" class="container">
+                <table class="table-responsive-xl tablesorter" id="myTable">
+                    <thead class="thead-light">
+                        <tr>
+                            <th class="filter-select filter-match">Metodo</th>
+                            <th class="filter-select filter-match">Codice</th>
+                            <th>Destinatario</th>
+                            <th class="filter-select filter-match">Tipo</th>
+                            <th>Importo</th>
+                            <th>Data</th>
+                            <th>Ora</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <button id="reset_button" class="confirmButton"><div class="buttonText">Resetta Filtri</div></button>
+                </table>
+            </div>
+    
+            <br/>
+            <!-- INIZIO FOOTER -->
+		    <div id="footer"></div>
+		    <!-- FINE FOOTER -->
+        </body>
+    </html>

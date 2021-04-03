@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Nuovo pagamento periodico</title>
+	
+			<!-- Required meta tags -->
+			<meta charset="utf-8">
+			  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+              <script type="text/javascript" src="js/jquery-validation.js"></script>
+			  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+              <script type="text/javascript" src="js/periodicPayment.js"></script>
+			<script type="text/javascript" src="js/main.js"></script>
+			  
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+			<!-- Nostri CSS -->
+            <link rel = "stylesheet" href="css/main.css" type = "text/css">
+            <link rel = "stylesheet" href="css/payShop.css" type = "text/css">
+        </head>
+
+        <body>
+            <!-- INIZIO HEADER -->
+			<div id="header"></div>
+            <!-- FINE HEADER -->
+            
+            <br/>
+            <div id="title"><p> Effettua rateizzazioni </p></div>
+            <br/>
+            
+            <div class="container payShopContainer">
+
+                <form id="myForm">
+                    <div class="row">
+                        <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-4 control-label" id="myLabel">Nome esercizio:</label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <input type="text" class="form-control" name="nome_esercizio">
+                        </div>
+                        </br></br>
+                    </div>
+                    <div class="row">
+                        <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-4 control-label" id="myLabel">Soldi da versare:</label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <input type="text" class="form-control" name="soldi_da_versare">
+                        </div>
+                        </br></br>
+                    </div>
+                    <div class="row">
+                        <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-4 control-label" id="myLabel">Data avvio:</label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <input type="date" class="form-control" name="data_avvio">
+                        </div>
+                        </br></br>
+                    </div>
+                    <div class="row">
+                        <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-4 control-label" id="myLabel">Periodicità:</label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <input type="text" class="form-control" name="periodicita" placeholder="ogni quanti giorni deve avvenire il pagamento">
+                        </div>
+                        </br></br>
+                    </div>
+                    <div class="row">
+                        <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-4 control-label" id="myLabel">Numero rate:</label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <input type="text" class="form-control" name="numero_rate">
+                        </div>
+                        </br></br>
+                    </div>
+
+                    <div class="row">
+                        <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-4 control-label" id="myLabel">Tipologia di pagamento:</label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <!-- al cambio devo poter disabilitare il tasto o fare una determinata query-->
+                            <select id="selectMethodType" class="form-control" name="selezione_metodo" onchange="methodTypeSelection()" >
+                                <option></option>
+                                <option value="Carta">Carta</option>
+                                <option value="Conto_corrente">Conto Corrente</option>
+                                <option value="Conto_online">Conto Online</option>
+                              </select>
+                        </div>
+                        </br></br>
+                        
+                    </div> 
+
+                    <div class="row">
+                        <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-4 control-label" id="myLabel">Metodo di pagamento:</label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <select id="selectMethod" type="text" class="form-control" name="codice_pagamento"></select>
+                        </div>
+                        </br></br>
+                    </div>
+                    
+                    <button class="confirmButton" type="submit"><div class="buttonText">Conferma</div></button> 
+                      
+                </form>
+                <a href="index.html"><button class="cancelButton"><div class="buttonText">Indietro</div></button></a>
+            </div>
+    
+            <br/>
+            <!-- INIZIO FOOTER -->
+			<div id="footer"></div>
+			<!-- FINE FOOTER -->
+        </body>
+    </html>

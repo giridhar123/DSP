@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Estratti conto</title>
+	
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery-validation.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/bankStatements.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+        <script src="https://unpkg.com/jspdf-autotable"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+			  
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<!-- Nostri CSS -->
+        <link rel = "stylesheet" href="css/main.css" type = "text/css">
+        <link rel = "stylesheet" href="css/manageMethods.css" type = "text/css">
+
+        
+    </head>
+    <body>
+        <!-- INIZIO HEADER -->
+		<div id="header"></div>
+        <!-- FINE HEADER -->
+
+        <br/>
+        <div id="title"><p>Estratti conto</p></div>
+        <br/>
+        <div class="container manageMethodsContainer">
+                <div class="row"> 
+                        <!--<label class="col-sm-12 col-md-6 col-lg-2 col-xl-2 control-label" id="myLabel">Tipo</label>-->
+                        
+                    </div>
+                    <div class="row" id="header_row">
+                       <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2">
+                            <label class="col-sm-12 col-md-6 col-lg-2 col-xl-2 control-label" id="myLabel">Giugno</label>
+                            <button onclick=setPDF(); class="confirmButton"><div class="buttonText">Download</div></button>
+                        </div>
+                        
+                    </div>
+                    
+            </div>
+            <br/>
+            <!-- INIZIO FOOTER -->
+			<div id="footer"></div>
+		    <!-- FINE FOOTER -->
+        </body>
+</html>

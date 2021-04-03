@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Socket</title>
+    <script>
+        var connection= new WebSocket('ws://localhost:8081/');
+    </script>
+</head>
+
+<body>
+    <h1>Comunicazione tramite Socket</h1>
+    <script>
+    </script>
+    <p>
+        <input type="email" id="mail_form">
+        <input type="password" id="pass_form">
+        <input type="submit" onclick="messaggia()" value="insert" id="ok">
+    </p>   
+    <script>
+    function messaggia(){
+        var obj ={
+            email: document.getElementById("mail_form").value,
+            password: document.getElementById("pass_form").value
+        }
+        alert(obj.password);
+        alert(obj.email);
+        connection.send(JSON.stringify(obj));
+
+        connection.onerror = function(evt) { 
+                alert(`Errore nell'invio` + evt.data);
+            }
+    }
+    </script>    
+</body>
+</html>

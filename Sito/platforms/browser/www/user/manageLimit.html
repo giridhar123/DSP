@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Gestione limiti spesa</title>
+	
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="http://www.dsp.it:8000/user/js/manageLimit.js"></script>
+		<script type="text/javascript" src="http://www.dsp.it:8000/js/main.js"></script>
+			  
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<!-- Nostri CSS -->
+        <link rel = "stylesheet" href="http://www.dsp.it:8000/css/main.css" type = "text/css">
+        <link rel = "stylesheet" href="http://www.dsp.it:8000/user/css/manageLimit.css" type = "text/css">	
+    </head>
+
+    <body onload="setLimitMethod();">
+        <!-- INIZIO HEADER -->
+		<div id="header"></div>
+        <!-- FINE HEADER -->
+
+        <br/>
+        <div id="title"><p>Gestione limiti spesa</p></div>
+        <br/>
+        <div class="container manageLimitContainer">
+            <div class="row" id="header_row"> 
+                <label class="col-sm-12 col-md-6 col-lg-6 col-xl-6 control-label" id="myLabel">Tipo Metodo</label>
+            </div>
+
+            <div class="row">
+                <label class="col-sm-12 col-md-6 col-lg-6 col-xl-6 control-label" id="myLabel">Codice metodo</label>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    Limite spesa giornalierio
+                    <select name="giornaliero" onchange="updateLimit();">
+                        <option>500</option>
+                        <option>750</option>
+                        <option>900</option>    
+                    </select>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    Limite spesa mensile
+                    <select name="mensile" onchange="updateLimit();">
+                        <option>1500</option>
+                        <option>2000</option>
+                        <option>2500</option>    
+                    </select>
+                </div> 
+            </div>
+        </div>
+        <br/>
+        <!-- INIZIO FOOTER -->
+        <div id="footer"></div>
+        <!-- FINE FOOTER -->
+    </body>
+</html>

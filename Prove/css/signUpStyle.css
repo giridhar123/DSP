@@ -1,0 +1,11 @@
+body{
+    margin: 5% 10% 5% 10%;
+}
+#myButton{
+    color: blue;
+    float: right;
+}
+
+#myLabel{
+    text-align: right;
+}

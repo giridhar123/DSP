@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "Gotham Rounded SSm A";
+  src: url("font/gothamroundedbold_21016.ttf");
+}
+
+@font-face {
+  font-family: "Gotham SSm A";
+  src: url("font/gothamroundedlight_21020.ttf");
+}
+
+body {
+	background-color: #fafeff;
+}
+
+.cancelButton {
+    background-color: rgba(255, 36, 76, 0.94);
+}
+
+.confirmButton {
+    background-color: rgba(81, 203, 254, 0.94);
+}
+
+.buttonText {
+    font-size: 17px;
+    color: #fff;
+}
+
+/* Add a gray background color and some padding to the footer */  
+.carousel-inner img {
+	width: 100%; /* Set width to 100% */
+	margin: auto;
+	min-height:200px;
+}
+
+.dspContainer {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid;
+  width: 50%;
+}
+
+.configurationContainer{
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid;
+    width: 70%;
+}
+
+#title {
+  text-align: center;
+}
+
+.title {
+	border-width: 1px;
+	border-style: solid;
+	border-color:rgba(81, 203, 254, 0.94);
+  border-radius: 2px;
+  font-family: "Gotham Rounded SSm A",  Helvetica, Arial, sans-serif;
+  font-size: 2.14286rem;
+}
+
+.description {
+  font-family: "Gotham SSm A", Helvetica, Arial, sans-serif;
+}
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) {
+  .carousel-caption {
+	display: none; 
+  }
+}
+
+.field {
+  color: rgba(81, 203, 254, 0.86);
+}

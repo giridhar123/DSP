@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Nuovo pagamento</title>
+	
+			<!-- Required meta tags -->
+			<meta charset="utf-8">
+			  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+			  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+			  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+			  <script type="text/javascript" src="http://localhost:8000/user/js/sendMoney.js"></script>
+            <script type="text/javascript" src="http://localhost:8000/js/main.js"></script>
+            
+			  
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+            <script type="text/javascript" src="http://localhost:8000/js/jquery-validation.js"></script>
+			<!-- Nostri CSS -->
+            <link rel = "stylesheet" href="http://localhost:8000/css/main.css" type = "text/css">
+            <link rel = "stylesheet" href="http://localhost:8000/user/css/payShop.css" type = "text/css">
+        </head>
+
+        <body>
+            <!-- INIZIO HEADER -->
+			<div id="header"></div>
+            <!-- FINE HEADER -->
+            
+            <br/>
+            <div id="title"><p> Manda Denaro ad un tuo amico </p></div>
+            <br/>
+            
+            <div class="container dspContainer">
+
+                <form id="myForm">
+                    
+                    <div class="row">
+                        <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-4 control-label" id="myLabel">E-mail destinatario:</label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <input type="text" class="form-control" name="email_destinatario">
+                        </div>
+                        </br></br>
+                    </div>
+
+                    <div class="row">
+                        <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-4 control-label" id="myLabel">Numero telefono Destinatario:</label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <input type="text" class="form-control" name="numero_telefono_destinatario">
+                        </div>
+                        </br></br>
+                    </div>
+
+                    <div class="row">
+                        <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-4 control-label" id="myLabel">Soldi da versare:</label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <input type="text" class="form-control" name="soldi_da_versare">
+                        </div>
+                        </br></br>
+                    </div>
+
+                    <div class="row">
+                        <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-4 control-label" id="myLabel">Tipologia di pagamento:</label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <!-- al cambio devo poter disabilitare il tasto o fare una determinata query-->
+                            <select id="selectMethodType" class="form-control" name="selezione_metodo" onchange="methodTypeSelection()" >
+                                <option></option>
+                                <option value="Carta">Carta</option>
+                                <option value="IBAN">Conto Corrente</option>
+                                <option value="ONLINE">Conto Online</option>
+                              </select>
+                        </div>
+                        </br></br>
+                        
+                    </div> 
+
+                    <div class="row">
+                        <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-4 control-label" id="myLabel">Metodo di pagamento:</label>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <select id="selectMethod" type="text" class="form-control" name="codice_pagamento"></select>
+                        </div>
+                        </br></br>
+                    </div>
+                    
+                    <button class="confirmButton" type="submit"><div class="buttonText">Conferma</div></button> 
+                      
+                </form>
+                <a href="http://localhost:8000/index.html"><button class="cancelButton"><div class="buttonText">Indietro</div></button></a>
+            </div>
+    
+            <br/>
+            <!-- INIZIO FOOTER -->
+			<div id="footer"></div>
+			<!-- FINE FOOTER -->
+        </body>
+    </html>

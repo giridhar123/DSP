@@ -1,0 +1,35 @@
+.manageMethodsContainer {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid;
+    width: auto;
+    text-align: center;
+}
+
+select {
+    margin-top: 20px;
+}
+
+input[type=text] {
+    width: 98%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+    margin-top: 15px;
+    margin-left: -2px;
+}
+
+input[type=date] {
+    width: 98%;
+    padding: 8px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+    margin-top: 15px;
+}
+
+.defaultButton {
+    padding: 8px 6px;
+}

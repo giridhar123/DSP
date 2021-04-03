@@ -1,0 +1,9 @@
+.managePeriodicContainer {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+		<title>Sign Up</title>
+		
+		<!-- Required meta tags -->
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    	<!-- Bootstrap 4.3.1 CSS -->
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    	<!-- Nostri CSS -->
+        <link rel = "stylesheet" href="http://localhost:8000/css/main.css" type = "text/css">
+        <link rel = "stylesheet" href="http://localhost:8000/css/signUp.css" type = "text/css">
+
+        <!-- Nostri JS -->
+        <script type="text/javascript" src="http://localhost:8000/js/jquery-validation.js"></script>
+        <script type="text/javascript" src="http://localhost:8000/js/signUp.js"></script>
+        <script type="text/javascript" src="http://localhost:8000/js/main.js"></script>
+
+        
+	</head>
+    
+    <body>
+        <!-- INIZIO HEADER -->
+		<div id="header"></div>
+        <!-- FINE HEADER -->
+        
+        <br/>
+        <div id="title"><p> Registrati al servizio di DSPay</p></div>
+        <br/>
+        <div class="container dspContainer">
+            <form id="myForm">
+                <div class="form-group row">
+                    <label class="col-sm-12 col-md-6 col-lg-6 col-xl-3 control-label" id="myLabel">Nome:</label>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <input type="text" class="form-control" name="nome">
+                    </div>
+                    </br></br>
+                    <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-3 control-label" id="myLabel">Cognome:</label>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <input type="text" class="form-control" name="cognome">
+                    </div>
+                    </br></br>
+                    <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-3 control-label" id="myLabel">Codice Fiscale:</label>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <input type="text" class="form-control" name="cf">
+                    </div>
+                    </br></br>
+                    <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-3 control-label" id="myLabel">Sesso:</label>
+                    <div class="radio col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <label><input type="radio" name="sesso" value="F">F</label>
+                        <label><input type="radio" name="sesso" value="M" checked>M</label>
+                    </div>
+                    </br></br>
+                    <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-3 control-label" id="myLabel">Data di Nascita:</label>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <input type="date" class="form-control" name="data">
+                    </div>
+                    </br></br>
+                    <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-3 control-label" id="myLabel">Città di Nascita:</label>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <input type="text" class="form-control" name="citta_nascita">
+                    </div>
+                    </br></br>
+                    <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-3 control-label" id="myLabel">Città di residenza:</label>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <input type="text" class="form-control" name="residenza">
+                    </div>
+                    </br></br>
+                    <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-3 control-label" id="myLabel">Email:</label>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <input type="text" class="form-control" name="email">
+                    </div>
+                    </br></br>
+                    <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-3 control-label" id="myLabel">Cellulare:</label>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <input type="text" class="form-control" name="cellulare">
+                    </div>
+                    </br></br>
+                    <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-3 control-label" id="myLabel">Telegram Chat ID: <a href="http://localhost:8000/telegramChatId.html">Guida</a></label>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <input type="text" class="form-control" name="telegram_ID">
+                    </div>
+                    </br></br>
+                    <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-3 control-label" id="myLabel">Password:</label>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <input type="password" class="form-control" name="password" id="passwordID">
+                    </div>
+                    </br></br>
+                    <label  class="col-sm-12 col-md-6 col-lg-6 col-xl-3 control-label" id="myLabel">Conferma Password:</label>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <input type="password" class="form-control" name="c_password">
+                    </div>
+
+                </div>
+                <button type ="submit" class="confirmButton" ><div class="buttonText">Registrati</div></button>
+                <br /><br />
+                
+            </form>
+            <a href="http://localhost:8000/index.html"><button class="cancelButton"><div class="buttonText">Indietro</div></button></a>
+        </div>
+
+        <br/>
+        <!-- INIZIO FOOTER -->
+		<div id="footer"></div>
+		<!-- FINE FOOTER -->
+    </body>
+</html>

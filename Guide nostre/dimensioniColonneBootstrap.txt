@@ -1,0 +1,5 @@
+.col- (extra small devices - < 576px)
+.col-sm- (small devices - >= 576px)
+.col-md- (medium devices - >= 768px)
+.col-lg- (large devices - >= 992px)
+.col-xl- (xlarge devices - >= 1200px)
